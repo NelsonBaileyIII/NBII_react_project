@@ -27,14 +27,14 @@ function Cards() {
           {/* Makes card links */}
           <ul className='cards__items'>
             <CardItem
-              src='./images/img-3.jpg'
-              text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
+              src='./images/img-20.jpg'
+              text='Explore the mysterious jungle in Panguipulli, Chile'
               label='Mystery'
               path='/services'
             />
             <CardItem
-              src='./images/img-4.jpg'
-              text='Experience Football on Top of the Himilayan Mountains'
+              src='./images/img-19.jpg'
+              text='Sail on the alluring Grand Canal in Venice Italy'
               label='Adventure'
               path='/products'
             />

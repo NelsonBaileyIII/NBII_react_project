@@ -4,6 +4,12 @@ import "../App.css";
 import { Button } from "./Button";
 import "./HeroSection.css";
 
+function handleClick(e) {
+  e.preventDefault();
+  console.log('The link was clicked.');
+}
+
+
 class HeroSection extends React.Component {
   constructor(props) {
     super(props);
@@ -36,6 +42,8 @@ class HeroSection extends React.Component {
     setInterval(this.switchImage, 5000);
   }
 
+
+
   render() {
     return (
       <div className="hero-container">
@@ -55,7 +63,7 @@ class HeroSection extends React.Component {
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
-            onClick={console.log("hey")}
+            onClick={handleClick}
             
           >
             WATCH TRAILER <i className="far fa-play-circle" />
