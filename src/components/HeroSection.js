@@ -16,6 +16,7 @@ class HeroSection extends React.Component {
     this.switchImage = this.switchImage.bind(this);
     this.state = {
       currentImage: 0,
+      //sets image array. 
       images: [
         "./images/img-11.jpg",
         "./images/img-12.jpg",
@@ -24,7 +25,7 @@ class HeroSection extends React.Component {
       ],
     };
   }
-
+// logic for the image to update. 
   switchImage() {
     if (this.state.currentImage < this.state.images.length - 1) {
       this.setState({
@@ -37,7 +38,7 @@ class HeroSection extends React.Component {
     }
     return this.currentImage;
   }
-
+// sets up the slideshow to change at whatever time it is to set.
   componentDidMount() {
     setInterval(this.switchImage, 5000);
   }
@@ -47,6 +48,7 @@ class HeroSection extends React.Component {
   render() {
     return (
       <div className="hero-container">
+        {/* shows whatever image the state is in */}
          <img src={this.state.images[this.state.currentImage]} alt="images" />
         <h1>Just Get Out And Go</h1>
         <p>What are you waiting for?</p>

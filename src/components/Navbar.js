@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
+  // updates the state for the menu icon click
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
 
+  const [button, setButton] = useState(true);
+//sets the click to always switch from false to true for mobile menu
   const handleClick = () => setClick(!click);
+  //sets the click to close the menu in mobile
   const closeMobileMenu = () => setClick(false);
 
   const showButton = () => {
@@ -17,11 +20,11 @@ function Navbar() {
       setButton(true);
     }
   };
-
+// fixes this weird annoying problem of the sign up button showing up outside the mobile menu
   useEffect(() => {
     showButton();
   }, []);
-
+// listen to the window size if it moves to the mobile size. 
   window.addEventListener('resize', showButton);
 
   return (
@@ -33,9 +36,12 @@ function Navbar() {
             <i class="fas fa-plane-departure"></i>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
+            {/* if clicked the icon changes back and forth */}
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
+          {/* if clicked makes nav menu disapear in mobile */}
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            {/* creates link to pages, the click makes the mobile menu close */}
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Home
