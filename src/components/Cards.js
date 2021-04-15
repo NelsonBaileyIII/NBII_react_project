@@ -2,6 +2,7 @@ import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
 
+
 function Cards() {
   return (
     <div className='cards'>
@@ -11,13 +12,13 @@ function Cards() {
           <ul className='cards__items'>
               {/* Makes Cards Link */}
             <CardItem
-              src='images/img-9.jpg'
+              src='/images/img-10.jpg'
               text='Explore the hidden waterfall deep inside the Amazon Jungle'
               label='Adventure'
               path='/services'
             />
             <CardItem
-              src='images/img-2.jpg'
+              src='./images/img-15.jpg'
               text='Travel through the Islands of Bali in a Private Cruise'
               label='Luxury'
               path='/services'
@@ -26,20 +27,20 @@ function Cards() {
           {/* Makes card links */}
           <ul className='cards__items'>
             <CardItem
-              src='images/img-3.jpg'
+              src='./images/img-3.jpg'
               text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
               label='Mystery'
               path='/services'
             />
             <CardItem
-              src='images/img-4.jpg'
+              src='./images/img-4.jpg'
               text='Experience Football on Top of the Himilayan Mountains'
               label='Adventure'
               path='/products'
             />
             <CardItem
-              src='images/img-8.jpg'
-              text='Ride through the Sahara Desert on a guided camel tour'
+              src='./images/img-16.jpg'
+              text='Travel cross country in our provided RV'
               label='Adrenaline'
               path='/sign-up'
             />
